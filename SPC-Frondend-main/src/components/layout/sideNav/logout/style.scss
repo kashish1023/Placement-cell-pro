@@ -1,0 +1,79 @@
+.logout {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .logout-button {
+    background: none;
+    color: inherit;
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+    padding: 0.7rem;
+    color: var(--secondary-font-color);
+
+    &:hover,
+    &:active,
+    &:focus {
+      outline: none;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: var(--primary-color-light);
+      color: var(--primary-font-color);
+      border-radius: 14px;
+    }
+
+    .icon {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.logout-alert {
+  max-width: 20rem;
+  padding: 1.5rem;
+  margin: 1rem;
+  background: var(--primary-bg-color);
+  border-radius: 1rem;
+
+  .content {
+    margin: 0;
+  }
+
+  .button-container {
+    width: 100%;
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+
+    .button {
+      border: none;
+      outline: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border-radius: 0.3rem;
+      padding: 0.7rem 1.5rem;
+      transition: all 200ms ease;
+
+      &:hover {
+        cursor: pointer;
+        background: var(--tertiary-bg-color);
+      }
+    }
+
+    .logout-button {
+      background: var(--secondary-bg-color);
+      color: var(--red-color);
+      margin-left: 1rem;
+    }
+
+    .cancel-button {
+      background: var(--secondary-bg-color);
+      color: var(--primary-color);
+    }
+  }
+}

@@ -1,0 +1,151 @@
+@import '../../../../config/mixins.scss';
+
+.profile {
+  width: 100%;
+  margin-bottom: 2.5rem;
+
+  color: var(--secondary-font-color);
+  .input-form {
+    display: flex;
+    width: 100%;
+
+    @include break-point(tablet) {
+      flex-direction: column;
+    }
+
+    .col1,
+    .col2 {
+      width: 100%;
+      margin: 2rem;
+      padding: 2.5rem;
+      border-radius: 1rem;
+      box-shadow: var(--primary-box-shadow);
+      background: var(--primary-bg-color);
+
+      @include break-point(tablet) {
+        width: auto;
+      }
+
+      @include break-point(mobile) {
+        margin: 1.25rem;
+      }
+
+      &:first-child {
+        margin-right: 1rem;
+
+        @include break-point(tablet) {
+          margin-right: 2rem;
+        }
+        @include break-point(mobile) {
+          margin-right: 1.25rem;
+        }
+      }
+      &:last-child {
+        margin-left: 1rem;
+
+        @include break-point(tablet) {
+          margin-left: 2rem;
+        }
+        @include break-point(mobile) {
+          margin-left: 1.25rem;
+        }
+      }
+
+      .tenth-marks,
+      .twelfth-marks {
+        display: flex;
+
+        .input {
+          width: 50%;
+          &:first-child {
+            margin-right: 2rem;
+          }
+        }
+      }
+      .heading-container {
+        display: flex;
+        align-items: center;
+        .icon {
+          margin-right: 0.5rem;
+          font-size: 1.5rem;
+          color: var(--primary-font-color);
+        }
+      }
+      .education-heading {
+        padding-top: 0.5rem;
+      }
+      .guardian-heading {
+        padding-top: 1rem;
+      }
+    }
+    .input {
+      padding: 1.2rem 0;
+    }
+    .gender-picker {
+      width: 100%;
+      .gender-values {
+        display: flex;
+        justify-content: space-evenly;
+      }
+    }
+  }
+  .button-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 2rem;
+
+    @include break-point(mobile) {
+      margin: 0;
+      width: auto;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .placement-wrapper {
+    width: 51%;
+
+    @include break-point(tablet) {
+      width: 100%;
+    }
+
+    .placement-form {
+      padding: 2.5rem;
+      margin: 2rem;
+      border-radius: 1rem;
+      box-shadow: var(--primary-box-shadow);
+      background: var(--primary-bg-color);
+
+      @include break-point(mobile) {
+        margin: 1.5rem;
+      }
+
+      .heading-container {
+        display: flex;
+        align-items: center;
+
+        .icon {
+          margin-right: 0.5rem;
+          font-size: 1.5rem;
+          color: var(--primary-font-color);
+        }
+      }
+
+      .input {
+        padding: 1rem 0;
+      }
+      .button-wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 1rem 0 0 0;
+
+        @include break-point(mobile) {
+          justify-content: center;
+          padding: 0;
+        }
+      }
+    }
+  }
+}

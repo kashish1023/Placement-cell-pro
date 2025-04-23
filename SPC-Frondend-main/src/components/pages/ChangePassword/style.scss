@@ -1,0 +1,67 @@
+@import '../../../config/mixins.scss';
+
+.change-password-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 80vh;
+
+  @include break-point(mobile) {
+    flex-direction: column-reverse;
+    background: var(--primary-bg-color);
+    box-shadow: none;
+    height: 100%;
+    margin: 1.5rem;
+    border-radius: 1rem;
+  }
+  .change-password-wrapper {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: var(--primary-box-shadow);
+    background: var(--primary-bg-color);
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+
+    .input {
+      padding: 1rem;
+    }
+    .button-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.75rem 0;
+    }
+
+    @include break-point(tablet) {
+      margin-top: 2rem;
+    }
+
+    @include break-point(mobile) {
+      box-shadow: none;
+      width: 90%;
+      background: none;
+      padding: 1rem;
+      .input {
+        padding: 1rem;
+      }
+    }
+  }
+  .change-password-svg {
+    width: 20rem;
+
+    @include break-point(desktop) {
+      width: 18rem;
+    }
+
+    @include break-point(tablet) {
+      display: none;
+    }
+
+    @include break-point(mobile) {
+      display: flex;
+      margin-top: 2rem;
+      width: 40vw;
+    }
+  }
+}
